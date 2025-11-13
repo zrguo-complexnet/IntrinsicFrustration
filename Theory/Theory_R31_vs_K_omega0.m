@@ -25,6 +25,7 @@ omega0_values = linspace(0, 150, 100);
 
 % Initialize result matrix
 results = zeros(length(K_values), length(omega0_values));
+results2 = zeros(length(K_values), length(omega0_values));
 
 SO = length(omega0_values);
 
@@ -72,8 +73,11 @@ parfor i = 1:length(K_values)
         
         % Store result
         results(i, j) = abs(R31);
+        results2(i, j) = abs(R32);
     end
 end
 
-save('D1_TR910_200_150.mat', 'results');  % Save data to file
+save('z1_D1_TR910_200_150.mat', 'results');  % Save data to file
+save('z2_D1_TR910_200_150.mat', 'results');  % Save data to file
 delete(gcp('nocreate'))
+
