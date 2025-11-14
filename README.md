@@ -47,38 +47,38 @@ The project consists of 4 parts:
 4. Supplementary Material
   This folder corresponds to the bifurcation analysis and model extensions presented in the Appendix. It contains the following subfolders:
 
-  - Bifurcation
-	HC_DrawManifold.m: Reproduces Appendix Fig. 4, showing manifold calculations near the homoclinic (HC) bifurcation.
-	SN_DrawAndJacob.m: For a chosen parameter set, plots variable trajectories and computes the Jacobian matrix and eigenvalues at the final state.
-	SN_Jacob_K.m：Reproduces Appendix Fig. 5, showing eigenvalue evolution across the saddle-node (SN) bifurcation.
-	SNLC_FloquetFit.m：Plots fitted curves for the Floquet multipliers.
-	SNLC_scanFoquet.m：Reproduces Appendix Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3-.
-	SNLC_scanFoquet2.m：Reproduces Appendix Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3+.
+  a. Bifurcation
+	-HC_DrawManifold.m: Reproduces Appendix Fig. 4, showing manifold calculations near the homoclinic (HC) bifurcation.
+	-SN_DrawAndJacob.m: For a chosen parameter set, plots variable trajectories and computes the Jacobian matrix and eigenvalues at the final state.
+	-SN_Jacob_K.m：Reproduces Appendix Fig. 5, showing eigenvalue evolution across the saddle-node (SN) bifurcation.
+	-SNLC_FloquetFit.m：Plots fitted curves for the Floquet multipliers.
+	-SNLC_scanFoquet.m：Reproduces Appendix Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3-.
+	-SNLC_scanFoquet2.m：Reproduces Appendix Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3+.
 	
-  - OtherDistribution
-	generate_normal_array.m: generates Gaussian samples
-	generate_sorted_lorentz_array.m：generates Lorentzian samples
-	generate_sorted_uniform_array.m：generates uniformly distributed samples
-	simulate_z.m: main script (select frequency distribution inside)
-	simulate_oscillators.m：simulation function
-	unimodal.m：reproduces Appendix Fig. 2 (dynamical asymmetry with unimodal frequency distributions)
+  b. OtherDistribution
+	-generate_normal_array.m: generates Gaussian samples
+	-generate_sorted_lorentz_array.m：generates Lorentzian samples
+	-generate_sorted_uniform_array.m：generates uniformly distributed samples
+	-simulate_z.m: main script (select frequency distribution inside)
+	-simulate_oscillators.m：simulation function
+	-unimodal.m：reproduces Appendix Fig. 2 (dynamical asymmetry with unimodal frequency distributions)
 	
-  - OtherInitialCondition
-	Running simulate_z.m here produces Appendix Fig. 11:The chimera state induced by intrinsic frustration is robust to initial-condition perturbations.
+  c. OtherInitialCondition
+	-Running simulate_z.m here produces Appendix Fig. 11:The chimera state induced by intrinsic frustration is robust to initial-condition perturbations.
 	
-  - OtherNetwork
-	BrainNetwork
+  d. OtherNetwork
+	-BrainNetwork:
 		Using empirical network data and running work.m produces Appendix Fig. 10: Dynamical asymmetry arises on a brain network.
-	RandomNetwork
+	-RandomNetwork:
 		build_flag_complex_and_save：constructs a higher-order random network
 		randomFlagComplex：helper function used for construction
 		run_highorder_kuramoto_on_flag：runs the higher-order Kuramoto model on the generated network, producing Appendix Fig. 9: Dynamical asymmetry arises even in Erdős–Rényi random networks.
 		
-  - OtherOrder
-	AddOrder1or2
+  e. OtherOrder
+	-AddOrder1or2
 		Asimulate_z_K1: omega0=50; evaluates chimera formation when adding first-order coupling (Appendix Fig. 7, left panel).
 		Bsimulate_z_K2: omega0=50; evaluates chimera formation when adding second-order coupling (Appendix Fig. 7, right panel).
-	Order4
+	-Order4
 		Csimulate_z_O4: evaluates chimera formation in a fourth-order Kuramoto model (Appendix Fig. 8).
 		
 Environment:
