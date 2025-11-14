@@ -7,7 +7,7 @@ We perform both numerical simulations and theoretical analysis of this state.
 Details can be found in our paper:
 "Higher-order Interactions Induce Chimera States in Globally Coupled Oscillators".
 
-The project consists of three parts:
+The project consists of 4 parts:
 
 1. Anime
    Run the script to view an animation of the Chimera state we discovered.
@@ -37,24 +37,57 @@ The project consists of three parts:
       The outputs are saved in files like `R1_910.mat` and `R3_910.mat`.
 
    c. The results from `Theory_R31_vs_K_omega0.m` are saved in files named like
-      `D1_TR910_150_200.mat`, where:
+      `z1_D1_TR910_200_150.mat`, where:
+         - z1 denotes the partial order parameter for the positive-frequency group (z2 would correspond to the negative-frequency group);
          - `D1` denotes the standard deviation;
          - `TR` stands for "theoretical result";
          - `910` is the same group ratio as above;
          - `150_200` indicates the range of omega_0 and K values.
-      The time step used in generating results from `Theory_R31_vs_K_omega0.m` is dt = 0.0001 / 3.
-      Note: Results from `Theory_R31_vs_K_omega0_Chimera.m` are not included, as we found
-      the boundary between chimera and incoherent states is independent of omega_0.
-      Therefore, we only calculated z_p vs. K to draw the theoretical boundary in Fig. 4.      
 
+4. Supplementary Material
+  This folder corresponds to the bifurcation analysis and model extensions presented in the Appendix. It contains the following subfolders:
+  Bifurcation
+	HC_DrawManifold.m: Reproduces Appendix Fig. 4, showing manifold calculations near the homoclinic (HC) bifurcation.
+	SN_DrawAndJacob.m: For a chosen parameter set, plots variable trajectories and computes the Jacobian matrix and eigenvalues at the final state.
+	SN_Jacob_K.m：Reproduces Appendix Fig. 5, showing eigenvalue evolution across the saddle-node (SN) bifurcation.
+	SNLC_FloquetFit.m：Plots fitted curves for the Floquet multipliers.
+	SNLC_scanFoquet.m：Reproduces Appendix Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3-.
+	SNLC_scanFoquet2.m：Reproduces Appendix Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3+.
+  OtherDistribution
+	generate_normal_array.m: generates Gaussian samples
+	generate_sorted_lorentz_array.m：generates Lorentzian samples
+	generate_sorted_uniform_array.m：generates uniformly distributed samples
+	simulate_z.m: main script (select frequency distribution inside)
+	simulate_oscillators.m：simulation function
+	unimodal.m：reproduces Appendix Fig. 2 (dynamical asymmetry with unimodal frequency distributions)
+  OtherInitialCondition
+	Running simulate_z.m here produces Appendix Fig. 11:The chimera state induced by intrinsic frustration is robust to initial-condition perturbations.
+  OtherNetwork
+	BrainNetwork
+		Using empirical network data and running work.m produces Appendix Fig. 10: Dynamical asymmetry arises on a brain network.
+	RandomNetwork
+		build_flag_complex_and_save：constructs a higher-order random network
+		randomFlagComplex：helper function used for construction
+		run_highorder_kuramoto_on_flag：runs the higher-order Kuramoto model on the generated network, producing Appendix Fig. 9: Dynamical asymmetry arises even in Erdős–Rényi random networks.
+  OtherOrder
+	AddOrder1or2
+		Asimulate_z_K1: omega0=50; evaluates chimera formation when adding first-order coupling (Appendix Fig. 7, left panel).
+		Bsimulate_z_K2: omega0=50; evaluates chimera formation when adding second-order coupling (Appendix Fig. 7, right panel).
+	Order4
+		Csimulate_z_O4: evaluates chimera formation in a fourth-order Kuramoto model (Appendix Fig. 8).
 Environment:
 - MATLAB R2021a or later
-- No additional toolboxes are required
+Optional:
+- MATLAB Parallel Computing Toolbox is required if you want to use parpool 
+  for large-scale simulations (recommended).
+- At least 8 GB RAM is recommended; 16 GB+ for flag complex simulations.
+
 
 Folder Structure:
-- /Anime       : Chimera animation script
-- /Simulation  : Simulation scripts and .mat result files
-- /Theory      : Theoretical analysis scripts and .mat result files
+- /Anime                   : Chimera animation script
+- /Simulation              : Simulation scripts and .mat result files
+- /Theory                  : Theoretical analysis scripts and .mat result files
+- /Supplementary Material  : Appendix-related analyses and extended numerical results.
 
 How to Run:
 1. View animation:
@@ -65,10 +98,6 @@ How to Run:
 
 3. Perform theoretical analysis:
    Go to the `Theory` folder and run `Theory_R31_vs_K_omega0.m` or `Theory_R31_vs_K_omega0_Chimera.m`.
-
-File Naming Conventions:
-- `z1ChimeraSim910D1.mat`: z1 = positive rotation, 910 = 9:1:0 ratio, D1 = standard deviation
-- `D1_TR910_150_200.mat`: theoretical result for D = 1, ratio 910, omega0 range = 150, K range = 200
 
 Citation:
 If you use this code in your research, please cite our paper:
