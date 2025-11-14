@@ -45,21 +45,21 @@ The project consists of 4 parts:
          - `150_200` indicates the range of omega_0 and K values.
 
 4. Supplementary Material
-  This folder corresponds to the bifurcation analysis and model extensions presented in the Appendix. It contains the following subfolders:
+  This folder corresponds to the bifurcation analysis and model extensions presented in the Supplementary Material. It contains the following subfolders:
 
   a. Bifurcation
   
-	- HC_DrawManifold.m: Reproduces Appendix Fig. 4, showing manifold calculations near the homoclinic (HC) bifurcation.
+	- HC_DrawManifold.m: Reproduces Supplementary Material Fig. 4, showing manifold calculations near the homoclinic (HC) bifurcation.
 	
 	- SN_DrawAndJacob.m: For a chosen parameter set, plots variable trajectories and computes the Jacobian matrix and eigenvalues at the final state.
 	
-	- SN_Jacob_K.m：Reproduces Appendix Fig. 5, showing eigenvalue evolution across the saddle-node (SN) bifurcation.
+	- SN_Jacob_K.m：Reproduces Supplementary Material Fig. 5, showing eigenvalue evolution across the saddle-node (SN) bifurcation.
 	
 	- SNLC_FloquetFit.m：Plots fitted curves for the Floquet multipliers.
 	
-	- SNLC_scanFoquet.m：Reproduces Appendix Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3-.
+	- SNLC_scanFoquet.m：Reproduces Supplementary Material Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3-.
 	
-	- SNLC_scanFoquet2.m：Reproduces Appendix Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3+.
+	- SNLC_scanFoquet2.m：Reproduces Supplementary Material Fig. 6(a). Floquet multiplier evolution for the SNLC bifurcation of z3+.
 	
   b. OtherDistribution
   
@@ -73,35 +73,35 @@ The project consists of 4 parts:
 	
 	- simulate_oscillators.m：simulation function
 	
-	- unimodal.m：reproduces Appendix Fig. 2 (dynamical asymmetry with unimodal frequency distributions)
+	- unimodal.m：reproduces Supplementary Material Fig. 2 (dynamical asymmetry with unimodal frequency distributions)
 	
   c. OtherInitialCondition
   
-	- Running simulate_z.m here produces Appendix Fig. 11:The chimera state induced by intrinsic frustration is robust to initial-condition perturbations.
+	- Running simulate_z.m here produces Supplementary Material Fig. 11:The chimera state induced by intrinsic frustration is robust to initial-condition perturbations.
 	
   d. OtherNetwork
   
 	- BrainNetwork:
-		Using empirical network data and running work.m produces Appendix Fig. 10: Dynamical asymmetry arises on a brain network.
+		Using empirical network data and running work.m produces Supplementary Material Fig. 10: Dynamical asymmetry arises on a brain network.
 		
 	- RandomNetwork:
 		build_flag_complex_and_save：constructs a higher-order random network
 		
 		randomFlagComplex：helper function used for construction
 		
-		run_highorder_kuramoto_on_flag：runs the higher-order Kuramoto model on the generated network, producing Appendix Fig. 9: Dynamical asymmetry arises even in Erdős–Rényi random networks.
+		run_highorder_kuramoto_on_flag：runs the higher-order Kuramoto model on the generated network, producing Supplementary Material Fig. 9: Dynamical asymmetry arises even in Erdős–Rényi random networks.
 		
   e. OtherOrder
   
 	- AddOrder1or2
 	
-		Asimulate_z_K1: omega0=50; evaluates chimera formation when adding first-order coupling (Appendix Fig. 7, left panel).
+		Asimulate_z_K1: omega0=50; evaluates chimera formation when adding first-order coupling (Supplementary Material Fig. 7, left panel).
 		
-		Bsimulate_z_K2: omega0=50; evaluates chimera formation when adding second-order coupling (Appendix Fig. 7, right panel).
+		Bsimulate_z_K2: omega0=50; evaluates chimera formation when adding second-order coupling (Supplementary Material Fig. 7, right panel).
 		
 	- Order4
 	
-		Csimulate_z_O4: evaluates chimera formation in a fourth-order Kuramoto model (Appendix Fig. 8).
+		Csimulate_z_O4: evaluates chimera formation in a fourth-order Kuramoto model (Supplementary Material Fig. 8).
 		
 Environment:
 - MATLAB R2021a or later
@@ -115,7 +115,7 @@ Folder Structure:
 - /Anime                   : Chimera animation script
 - /Simulation              : Simulation scripts and .mat result files
 - /Theory                  : Theoretical analysis scripts and .mat result files
-- /Supplementary Material  : Appendix-related analyses and extended numerical results.
+- /Supplementary Material  : Supplementary Material related analyses and extended numerical results.
 
 How to Run:
 1. View animation:
