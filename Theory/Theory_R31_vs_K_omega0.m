@@ -2,8 +2,8 @@
 gamma1 = 0.9;
 gamma2 = 0.1;
 gamma3 = 0;     % Proportions of oscillators in the three synchronized regions
-dt = 0.0001;    % Time step, should be as small as possible
-N = 100000;     % Total number of time steps
+dt = 0.00001;    % Time step, should be as small as possible
+N = 1000000;     % Total number of time steps
 Delta = 1;
 
 load('R1_910.mat');
@@ -16,7 +16,7 @@ R1_R3_interp = @(R3) interp1(R3_data, R1_data, R3, 'spline');
 
 % Enable parallel pool if not already active
 if isempty(gcp('nocreate'))
-    parpool(24);
+    parpool;
 end
 
 % Define the ranges of K and omega0
@@ -80,4 +80,5 @@ end
 save('z1_D1_TR910_200_150.mat', 'results');  % Save data to file
 save('z2_D1_TR910_200_150.mat', 'results');  % Save data to file
 delete(gcp('nocreate'))
+
 
