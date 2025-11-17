@@ -127,10 +127,10 @@ Using empirical network data and running `work.m` produces Supplementary Materia
 ---
 
 ## Folder Structure
-/Anime : Chimera animation script
-/Simulation : Simulation scripts and .mat result files
-/Theory : Theoretical analysis scripts and .mat result files
-/Supplementary Material : Supplementary analyses and extended numerical results
+ - /Anime : Chimera animation script
+ - /Simulation : Simulation scripts and .mat result files
+ - /Theory : Theoretical analysis scripts and .mat result files
+ - /Supplementary Material : Supplementary analyses and extended numerical results
 
 
 ---
