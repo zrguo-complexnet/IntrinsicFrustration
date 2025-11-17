@@ -19,10 +19,8 @@ Run the script to view an animation of the Chimera state we discovered.
 ## 2. Simulation
 This corresponds to the numerical simulations shown in Fig. 4 of the paper.
 
-### a.  
 Run the script **`simulate_z.m`** to obtain the partial order parameters `z_p` and `z_n`, representing the oscillators rotating in the positive and negative directions, respectively, under different values of **K** and **omega_0**.
 
-### b.  
 Simulation results are also included in this folder.  
 Files are named like **`z1ChimeraSim910D1.mat`**, where:
 
@@ -35,12 +33,12 @@ Files are named like **`z1ChimeraSim910D1.mat`**, where:
 ## 3. Theory
 This corresponds to the theoretical analysis shown in Fig. 4 of the paper.
 
-- `Theory_R31_vs_K_omega0.m` computes the boundary between the chimera state and traveling wave state. 
+`Theory_R31_vs_K_omega0.m` computes the boundary between the chimera state and traveling wave state. 
 
--`R1_R3.m` is used to numerically determine the functional relationship between the partial order parameters \( R_{1,p} \) and \( R_{3,p} \) in each synchronous group.  
+`R1_R3.m` is used to numerically determine the functional relationship between the partial order parameters \( R_{1,p} \) and \( R_{3,p} \) in each synchronous group.  
 The outputs are saved in files like `R1_910.mat` and `R3_910.mat`.
 
--Results from `Theory_R31_vs_K_omega0.m` are saved in files named like:  
+Results from `Theory_R31_vs_K_omega0.m` are saved in files named like:  
 **`z1_D1_TR910_200_150.mat`**, where:
 
 - `z1` denotes the partial order parameter for the positive-frequency group (`z2` → negative group)
