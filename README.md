@@ -35,15 +35,12 @@ Files are named like **`z1ChimeraSim910D1.mat`**, where:
 ## 3. Theory
 This corresponds to the theoretical analysis shown in Fig. 4 of the paper.
 
-### a.
 - `Theory_R31_vs_K_omega0.m` computes the boundary between the chimera state and traveling wave state. 
 
-### b.
-`R1_R3.m` is used to numerically determine the functional relationship between the partial order parameters \( R_{1,p} \) and \( R_{3,p} \) in each synchronous group.  
+-`R1_R3.m` is used to numerically determine the functional relationship between the partial order parameters \( R_{1,p} \) and \( R_{3,p} \) in each synchronous group.  
 The outputs are saved in files like `R1_910.mat` and `R3_910.mat`.
 
-### c.
-Results from `Theory_R31_vs_K_omega0.m` are saved in files named like:  
+-Results from `Theory_R31_vs_K_omega0.m` are saved in files named like:  
 **`z1_D1_TR910_200_150.mat`**, where:
 
 - `z1` denotes the partial order parameter for the positive-frequency group (`z2` → negative group)
@@ -152,7 +149,6 @@ Go to the `Simulation` folder and run `simulate_z.m`.
 Go to the `Theory` folder and run:
 
 - `Theory_R31_vs_K_omega0.m`  
-- `Theory_R31_vs_K_omega0_Chimera.m`
 
 ---
 
