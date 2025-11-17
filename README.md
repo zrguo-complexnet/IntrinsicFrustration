@@ -36,8 +36,7 @@ Files are named like **`z1ChimeraSim910D1.mat`**, where:
 This corresponds to the theoretical analysis shown in Fig. 4 of the paper.
 
 ### a.
-- `Theory_R31_vs_K_omega0.m` computes the boundary between the chimera state and traveling wave state.  
-- `Theory_R31_vs_K_omega0_Chimera.m` computes the boundary between the chimera and incoherent states.
+- `Theory_R31_vs_K_omega0.m` computes the boundary between the chimera state and traveling wave state. 
 
 ### b.
 `R1_R3.m` is used to numerically determine the functional relationship between the partial order parameters \( R_{1,p} \) and \( R_{3,p} \) in each synchronous group.  
